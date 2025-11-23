@@ -1,11 +1,34 @@
+# Development files
 .vscode/**
 .vscode-test/**
 src/**
+.git/**
 .gitignore
-.yarnrc
-vsc-extension-quickstart.md
+
+# Build & test files
 **/tsconfig.json
 **/.eslintrc.json
-**/*.map
 **/*.ts
 test-data/**
+*.test.js
+.npmignore
+.yarnrc
+
+# Dependencies (should be bundled separately)
+node_modules/**
+
+# Test scripts
+test-suite.sh
+validation-tests.sh
+functional-test.sh
+run-all-tests.sh
+
+# Documentation (reduce package size)
+CONTRIBUTING.md
+TEST-REPORT.md
+IMPLEMENTATION-SUMMARY.md
+FINAL-TEST-RESULTS.md
+
+# Other
+vsc-extension-quickstart.md
+*.vsix

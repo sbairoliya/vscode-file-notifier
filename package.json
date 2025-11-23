@@ -3,6 +3,12 @@
   "displayName": "Remote Notifier",
   "description": "Send native notifications from remote SSH to local machine",
   "version": "0.1.0",
+  "publisher": "remote-notifier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sbairoliya/vscode-file-notifier"
+  },
+  "homepage": "https://github.com/sbairoliya/vscode-file-notifier",
   "engines": {
     "vscode": "^1.85.0"
   },
