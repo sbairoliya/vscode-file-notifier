@@ -98,7 +98,7 @@ echo ""
 echo -e "${YELLOW}[9] Dependencies Tests${NC}"
 run_test "node-notifier package installed" "[ -d node_modules/node-notifier ]"
 run_test "chokidar package installed" "[ -d node_modules/chokidar ]"
-run_test "vscode package installed" "[ -d node_modules/vscode ]"
+run_test "vscode types available" "[ -d node_modules/@types/vscode ]"
 echo ""
 
 # Test 10: Verify notification.json structure
