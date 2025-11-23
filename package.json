@@ -1,0 +1,72 @@
+{
+  "name": "remote-notifier",
+  "displayName": "Remote Notifier",
+  "description": "Send native notifications from remote SSH to local machine",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "remote-notifier.sendNotification",
+        "title": "Send Test Notification"
+      },
+      {
+        "command": "remote-notifier.showStatus",
+        "title": "Remote Notifier: Show Status"
+      }
+    ],
+    "configuration": {
+      "title": "Remote Notifier",
+      "properties": {
+        "remoteNotifier.watchPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to watch for notification JSON (remote only)"
+        },
+        "remoteNotifier.enableSound": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable sound for notifications"
+        },
+        "remoteNotifier.notificationTimeout": {
+          "type": "number",
+          "default": 10,
+          "description": "Notification timeout in seconds"
+        }
+      }
+    }
+  },
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/node-notifier": "^8.0.5",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.x",
+    "@typescript-eslint/parser": "^6.x",
+    "eslint": "^8.x",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "node-notifier": "^10.0.1"
+  }
+}

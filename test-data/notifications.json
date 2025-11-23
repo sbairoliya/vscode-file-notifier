@@ -1,0 +1,7 @@
+{
+  "title": "Test Notification",
+  "message": "This is a test message from the remote server",
+  "timestamp": 1234567890,
+  "priority": "normal",
+  "sound": true
+}

@@ -1,0 +1,7 @@
+node_modules/
+out/
+*.js.map
+dist/
+.vscode/
+.DS_Store
+*.log
