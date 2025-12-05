@@ -1,0 +1,39 @@
+{
+  "name": "remote-notifier-watcher",
+  "displayName": "Remote Notifier (Watcher)",
+  "description": "Watch files for notification triggers",
+  "version": "0.1.0",
+  "publisher": "sbairoliya",
+  "engines": { "vscode": "^1.85.0" },
+  "extensionKind": ["workspace", "ui"],
+  "extensionDependencies": ["sbairoliya.remote-notifier-local"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "remote-notifier.sendTest", "title": "Remote Notifier: Send Test from Watcher" }
+    ],
+    "configuration": {
+      "title": "Remote Notifier Watcher",
+      "properties": {
+        "remoteNotifier.watchPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to JSON file to watch for notifications"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3"
+  }
+}

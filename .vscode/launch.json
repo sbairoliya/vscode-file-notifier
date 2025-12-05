@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Local Notifier",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}/packages/local-notifier"],
+      "outFiles": ["${workspaceFolder}/packages/local-notifier/out/**/*.js"],
+      "preLaunchTask": "npm: compile"
+    },
+    {
+      "name": "Run File Watcher",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": ["--extensionDevelopmentPath=${workspaceFolder}/packages/file-watcher"],
+      "outFiles": ["${workspaceFolder}/packages/file-watcher/out/**/*.js"],
+      "preLaunchTask": "npm: compile"
+    },
+    {
+      "name": "Run Both Extensions",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/packages/local-notifier",
+        "--extensionDevelopmentPath=${workspaceFolder}/packages/file-watcher"
+      ],
+      "outFiles": ["${workspaceFolder}/packages/*/out/**/*.js"],
+      "preLaunchTask": "npm: compile"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "remote-notifier-local",
+  "displayName": "Remote Notifier (Local)",
+  "description": "Local notification handler for remote file watcher",
+  "version": "0.1.0",
+  "publisher": "sbairoliya",
+  "engines": { "vscode": "^1.85.0" },
+  "api": "none",
+  "extensionKind": ["ui"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "remote-notifier.showNotification", "title": "Remote Notifier: Show Notification" },
+      { "command": "remote-notifier.test", "title": "Remote Notifier: Test Local Notification" }
+    ],
+    "configuration": {
+      "title": "Remote Notifier",
+      "properties": {
+        "remoteNotifier.enableSound": { "type": "boolean", "default": true }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1"
+  }
+}
