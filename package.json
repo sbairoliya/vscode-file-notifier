@@ -1,11 +1,11 @@
 {
   "name": "vscode-file-notifier",
   "private": true,
-  "workspaces": ["packages/*"],
   "scripts": {
-    "install:all": "npm install && cd packages/local-notifier && npm install && cd ../file-watcher && npm install",
-    "compile": "npm run compile -w packages/local-notifier && npm run compile -w packages/file-watcher",
-    "package": "npm run package -w packages/local-notifier && npm run package -w packages/file-watcher",
+    "install:all": "cd packages/local-notifier && npm install && cd ../file-watcher && npm install",
+    "compile": "cd packages/local-notifier && npm run compile && cd ../file-watcher && npm run compile",
+    "test": "cd packages/local-notifier && npm test && cd ../file-watcher && npm test",
+    "package": "cd packages/local-notifier && npx vsce package && cd ../file-watcher && npx vsce package",
     "build": "npm run compile && npm run package"
   },
   "devDependencies": {

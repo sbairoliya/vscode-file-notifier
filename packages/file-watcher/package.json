@@ -4,6 +4,7 @@
   "description": "Watch files for notification triggers",
   "version": "0.1.0",
   "publisher": "sbairoliya",
+  "repository": { "type": "git", "url": "https://github.com/sbairoliya/vscode-file-notifier" },
   "engines": { "vscode": "^1.85.0" },
   "extensionKind": ["workspace", "ui"],
   "extensionDependencies": ["sbairoliya.remote-notifier-local"],
@@ -26,6 +27,7 @@
   },
   "scripts": {
     "compile": "tsc -p ./",
+    "test": "node out/extension.test.js",
     "package": "vsce package"
   },
   "devDependencies": {

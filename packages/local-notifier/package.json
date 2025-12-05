@@ -4,6 +4,7 @@
   "description": "Local notification handler for remote file watcher",
   "version": "0.1.0",
   "publisher": "sbairoliya",
+  "repository": { "type": "git", "url": "https://github.com/sbairoliya/vscode-file-notifier" },
   "engines": { "vscode": "^1.85.0" },
   "api": "none",
   "extensionKind": ["ui"],
@@ -23,10 +24,12 @@
   },
   "scripts": {
     "compile": "tsc -p ./",
+    "test": "node out/extension.test.js",
     "package": "vsce package"
   },
   "devDependencies": {
     "@types/node": "^18.x",
+    "@types/node-notifier": "^8.0.5",
     "@types/vscode": "^1.85.0",
     "typescript": "^5.3.0"
   },
