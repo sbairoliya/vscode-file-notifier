@@ -1,0 +1,26 @@
+# Development files
+.vscode/**
+.vscode-test/**
+src/**
+.git/**
+.gitignore
+
+# Build & test files
+**/tsconfig.json
+**/.eslintrc.json
+**/*.ts
+test-data/**
+test.sh
+*.test.js
+.npmignore
+.yarnrc
+
+# Dependencies
+node_modules/**
+
+# Documentation
+CONTRIBUTING.md
+
+# Other
+vsc-extension-quickstart.md
+*.vsix
