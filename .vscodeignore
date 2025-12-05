@@ -10,24 +10,16 @@ src/**
 **/.eslintrc.json
 **/*.ts
 test-data/**
+test.sh
 *.test.js
 .npmignore
 .yarnrc
 
-# Dependencies (should be bundled separately)
+# Dependencies
 node_modules/**
 
-# Test scripts
-test-suite.sh
-validation-tests.sh
-functional-test.sh
-run-all-tests.sh
-
-# Documentation (reduce package size)
+# Documentation
 CONTRIBUTING.md
-TEST-REPORT.md
-IMPLEMENTATION-SUMMARY.md
-FINAL-TEST-RESULTS.md
 
 # Other
 vsc-extension-quickstart.md
